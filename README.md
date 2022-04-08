@@ -19,11 +19,12 @@ This terraform module will deploy the following services:
   - CloudWatch Event Rule to trigger lambda function
   - CloudWatch Log Group
   - CloudWatch Log Stream
+
 # Usage Instructions
 ## Example
 ```terraform
 terraform init
-terraform workspace create new
+terraform workspace new development
 terraform plan -var-file=envs/development.tfvars
 terraform apply -var-file=envs/development.tfvars --auto-approve
 ```
@@ -36,11 +37,11 @@ terraform apply -var-file=envs/development.tfvars --auto-approve
 
 ## Inputs
 
-Referenace in the vars file under envs/development.tfvars
+Reference in the vars file under envs/development.tfvars
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| arn | ARN of transfer server |
-| id | ID of transfer server |
+| aws_transfer_server_arn | ARN of transfer server |
+| aws_transfer_server_id | ID of transfer server |
