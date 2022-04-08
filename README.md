@@ -1,4 +1,4 @@
-# Repo for AWS SFTP Server
+# Repo for AWS SFTP Server , Lambda, CloudWatch and IAM
 
 This terraform module will deploy the following services:
 - IAM
