@@ -4,7 +4,7 @@ locals {
 
 resource "aws_lambda_function" "lambda" {
   function_name     = local.name
-  filename          = var.filename
+  filename          = "${path.module}/template/${var.filename}"
   role              = aws_iam_role.iam_for_lambda.arn
   handler           = var.index_handler
   timeout	          = var.timeout

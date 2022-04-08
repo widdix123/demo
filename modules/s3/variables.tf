@@ -15,6 +15,9 @@ variable "bucket_acl_type" {
   
 }
 
+variable "sftp_folder" {
+    default = "/incoming/"
+}
 
 //Tags
 
@@ -22,3 +25,4 @@ variable "default_tags" {
   description = "Default tags for all resources"
   type        = map(any)
 }
+

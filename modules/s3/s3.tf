@@ -19,3 +19,11 @@ resource "aws_s3_bucket_acl" "dixio" {
   bucket = aws_s3_bucket.dixio.id
   acl    = var.bucket_acl_type
 }
+
+
+resource "aws_s3_bucket_object" "folder1" {
+    bucket = aws_s3_bucket.dixio.id
+    acl    = var.bucket_acl_type
+    key    = var.sftp_folder
+    source = "/dev/null"
+}

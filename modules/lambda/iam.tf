@@ -32,10 +32,16 @@ resource "aws_iam_policy" "lambda_logging" {
       "Action": [
         "logs:CreateLogGroup",
         "logs:CreateLogStream",
-        "logs:PutLogEvents",
-        "s3:*"
+        "logs:PutLogEvents"
       ],
       "Resource": "arn:aws:logs:*:*:*",
+      "Effect": "Allow"
+    },
+    {
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": "*",
       "Effect": "Allow"
     }
   ]

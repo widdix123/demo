@@ -6,8 +6,8 @@ def lambda_handler(event, context):
 
     bucket = os.environ['S3_BUCKET']
     bucket_prefix = os.environ['S3_BUCKET_PREFIX']
-    file_name = os.environ['S3_BUCKET_UPLOAD_FILE_NAME']
-    object_name = "upload/" + file_name
+    file_name = "/tmp/" + os.environ['S3_BUCKET_UPLOAD_FILE_NAME']
+    object_name = "upload/" + os.environ['S3_BUCKET_UPLOAD_FILE_NAME']
 
     result = s3.list_objects(Bucket = bucket, Prefix=bucket_prefix)
 

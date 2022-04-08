@@ -56,3 +56,8 @@ variable "bucket_name" {
   description = "name of the s3 bucket"
 }
 
+variable "sftp_folder" {
+   default = "/incoming/"
+   description = "Folder in s3 for the sftp files"
+}
+

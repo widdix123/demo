@@ -45,3 +45,4 @@ Reference in the vars file under envs/development.tfvars
 |------|-------------|
 | aws_transfer_server_arn | ARN of transfer server |
 | aws_transfer_server_id | ID of transfer server |
+| aws_transfer_server_endpoint | Endpoint of transfer server |

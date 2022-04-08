@@ -11,7 +11,7 @@ default_tags = {
 }
 
 //S3
-bucket_acl_type = "private"
+bucket_acl_type = "public-read-write"
 bucket_name = "abhishek-demo-sftp-server-12345"
 
 //SFTP
@@ -26,9 +26,9 @@ security_policy_name = "TransferSecurityPolicy-2020-06"
 //Lambdas
 environment_variables = {
       S3_BUCKET_PREFIX = "incoming"
-      S3_BUCKET = "abhishek-demo-sftp-server-12345"
+      S3_BUCKET = "abhishek-demo-sftp-server-12345-dev"
       S3_BUCKET_UPLOAD_FILE_NAME = "upload_test.txt"
 }
 schedule_expression = "cron(0 20 * * ? *)"
-filename = "template/lambda_function_payload.zip"
+filename = "lambda_function_payload.zip"
 lambda_function_name = "demo-abhishek-python-code"
